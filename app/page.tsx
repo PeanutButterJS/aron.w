@@ -16,7 +16,7 @@ export default function Home() {
         <div className={styles.heading}>Aron Weinraub</div>
         <div className={styles.description}>Frontend Architect</div>
         <div className={styles.description2}>
-          Excelling in great DX whithout compromizing on UX
+          Excelling in great DX without compromizing on UX
         </div>
       </div>
     </main>
