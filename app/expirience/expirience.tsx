@@ -43,11 +43,11 @@ export const Expirience = () => {
           company="Crossriver"
         />
       </div> */}
-      <div className={styles.expirienceContent}>
+      <div className={`${styles.expirienceContent} expirience`}>
         <Crossriver />
         <Rapaport />
-        <Crossriver />
-        <Crossriver />
+        {/*   <Crossriver />
+        <Crossriver /> */}
       </div>
     </div>
   );

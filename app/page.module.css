@@ -22,6 +22,9 @@
   opacity: 0.5;
   color: #f92672;
 }
+:global(.expirience) .tag {
+  opacity: 0.8;
+}
 
 .indented {
   padding-left: 45px;
@@ -96,17 +99,16 @@
   position: fixed;
   top: 50%;
   left: 50%;
-  /*   background: rgba(255, 255, 255, 0.08); */
+  background: rgba(246, 246, 246, 0.2);
   /*  border-radius: 0px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
-  /* backdrop-filter: blur(1px);
-  box-shadow: 0 0 18px 3px rgba(0, 0, 0, 0.3); */
+  /*    backdrop-filter: blur(1px); */
+  box-shadow: 0 0 18px 3px rgba(0, 0, 0, 0.3);
 
-  backdrop-filter: blur(7px) saturate(20%);
-  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(12.7px) saturate(20%);
+  /*  background-color: rgba(255, 255, 255, 0.5); */
   border-radius: 12px;
-  border: 1px solid rgba(209, 213, 219, 0.3);
-
+  color: #2e2e2e;
   padding: 15px;
   padding-right: 24px;
   padding-top: 50px;
@@ -134,7 +136,7 @@
   flex-direction: column;
   width: 100%;
   height: 100%;
-  color: black;
+  color: white;
 }
 .close {
   position: relative;
@@ -159,6 +161,11 @@
   gap: 0px;
   align-items: flex-start;
 }
+
+.ul {
+  margin-top: 30px;
+}
+
 .expirience {
   color: #a6e22e;
   padding-bottom: 10px;
@@ -171,6 +178,10 @@
   justify-content: flex-start;
   position: relative;
   transition: all 0.3s ease-in-out;
+}
+.htmlComment {
+  color: #a6e22e;
+  font-family: monospace;
 }
 
 .year {

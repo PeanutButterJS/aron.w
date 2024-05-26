@@ -16,7 +16,7 @@ export default function Home() {
     <main className={`${styles.main} ${fira.className}`}>
       <div className={styles.tag}>{`<body>`}</div>
 
-      <div className={styles.insideBody}>
+      <div className={styles.indented}>
         <div>
           <span className={styles.tag}>{`<h1>`}</span>
           {`Aron Weinraub`}

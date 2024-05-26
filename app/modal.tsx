@@ -16,7 +16,7 @@ export const Modal = ({
   onClose: () => void;
 }) => {
   return (
-    <div className={`${styles.modal} ${marker.className}`}>
+    <div className={styles.modal}>
       <div className={styles.modalContent}>
         <button className={styles.close} onClick={onClose}>
           &times;
