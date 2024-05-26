@@ -4,6 +4,7 @@ import { Buttons } from "./buttons";
 
 import { Fira_Code } from "next/font/google";
 import { ConsoleLog } from "./console-log";
+import { GoogleA } from "./google-a";
 
 const fira = Fira_Code({
   weight: "400",
@@ -56,6 +57,7 @@ export default function Home() {
       <div className={styles.tag}>{`</body>`}</div>
 
       <ConsoleLog />
+      <GoogleA />
     </main>
   );
 }
