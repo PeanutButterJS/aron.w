@@ -41,6 +41,7 @@ export const useGa = () => {
   const sendEvent = (event: SendEvent) => {
     const { eventName, ...rest } = event;
     ReactGA.event(eventName, {
+      whatTimeIsIt: Date.now(),
       ...rest,
     });
   };
