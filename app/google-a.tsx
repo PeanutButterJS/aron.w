@@ -9,6 +9,7 @@ export const GoogleA = () => {
     const trackingId = "G-8MX8B7Q3XL";
 
     reactGa.initialize(trackingId);
+    reactGa.send({ hitType: "pageview", page: "/home", title: "Home Page" });
   }, []);
   return null;
 };
