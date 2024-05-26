@@ -1,24 +1,61 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import { Buttons } from "./buttons";
+
+import { Fira_Code } from "next/font/google";
+import { ConsoleLog } from "./console-log";
+
+const fira = Fira_Code({
+  weight: "400",
+  subsets: ["latin"],
+});
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <Image
-        src="/code.jpg"
-        alt="code"
-        width={100}
-        height={100}
-        className={styles.backgroundImage}
-        priority
-      />
-      <div className={styles.background}>
-        <div className={styles.heading}>Aron Weinraub</div>
-        <div className={styles.description}>Frontend Architect</div>
-        <div className={styles.description2}>
-          Excelling in great DX without compromizing on UX
+    <main className={`${styles.main} ${fira.className}`}>
+      <div className={styles.tag}>{`<body>`}</div>
+
+      <div className={styles.insideBody}>
+        <div>
+          <span className={styles.tag}>{`<h1>`}</span>
+          {`Aron Weinraub`}
+          <span className={styles.tag}>{`</h1>`}</span>
+        </div>
+        <div>
+          <span className={styles.tag}>{`<h2>`}</span>
+          {`Frontend Architect`}
+          <span className={styles.tag}>{`</h2>`}</span>
+        </div>
+        <div>
+          <div className={styles.tag}>{`<p>`}</div>
+          <span className={styles.indented}>
+            {`Great `}
+            <span className={styles.tag}>{`<i>`}</span>
+            <span>{`DX`}</span>
+            <span className={styles.tag}>{`</i>`}</span>
+            <span>{` with uncompromising `}</span>
+            <span className={styles.tag}>{`<i>`}</span>
+            <span>{` UX`}</span>
+            <span className={styles.tag}>{`</i>`}</span>
+          </span>
+          <div className={styles.tag}>{`</p>`}</div>
+        </div>
+        <div>
+          <Buttons />
         </div>
       </div>
+      <div className={styles.script}>
+        <div className={styles.tag}>{`<script>`}</div>
+        <div
+          className={styles.comment}
+        >{`// check out the contact info in the console.`}</div>
+        <span className={styles.consoleLog}>console.log(contactInfo)</span>
+        <div className={styles.tag}>{`</script>`}</div>
+      </div>
+
+      <div className={styles.tag}>{`</body>`}</div>
+
+      <ConsoleLog />
     </main>
   );
 }
