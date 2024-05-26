@@ -1,6 +1,7 @@
 "use client";
 
 import { useGa } from "./hooks/useGA";
+import { useMixpanel } from "./hooks/useMixpanel";
 import styles from "./page.module.css";
 
 export const Button = ({
@@ -13,10 +14,12 @@ export const Button = ({
   setOpen: (id: number) => void;
 }) => {
   const { sendEvent } = useGa();
+  const { trackEvent } = useMixpanel();
 
   const click = () => {
     setOpen(id);
     sendEvent({ eventName: "BUTTON_CLICK", label: name });
+    trackEvent({ eventName: "BUTTON_CLICK", label: name });
   };
 
   return (
