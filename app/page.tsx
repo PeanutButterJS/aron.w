@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import styles from "./page.module.css";
 import { Buttons } from "./buttons";
@@ -6,26 +8,56 @@ import { Fira_Code, Permanent_Marker } from "next/font/google";
 import { ConsoleLog } from "./console-log";
 import { GoogleA } from "./google-a";
 import { Mixpanel } from "./mixpanel";
+import localFont from "next/font/local";
+import { use } from "react";
+import { useMixpanel } from "./hooks/useMixpanel";
 
 const fira = Fira_Code({
   weight: "400",
   subsets: ["latin"],
 });
-const marker = Permanent_Marker({
+const whiteboardFont = localFont({
+  src: "./DryWhiteboardMarker-Regular.ttf",
+  display: "swap",
+  variable: "--whiteboard-font",
+});
+/* const marker = Permanent_Marker({
   weight: "400",
   subsets: ["latin"],
-});
+}); */
 
 export default function Home() {
-  return (
-    <main className={`${styles.main} ${fira.className} `}>
-      {/*  <div className={styles.whiteBoard}></div>
-      <div className={styles.topOfBoard}>
-        <h1>Aron Weinraub</h1>
-        <h3>Frontend Architect</h3>
-      </div> */}
+  const mixPanel = useMixpanel();
+  const handleClick = (e: any) => {
+    console.log("Right click");
+    mixPanel.trackEvent({
+      eventName: "Right click",
+      label: "Right click",
+      whatDidHeDo: "found my contact info",
+    });
+  };
 
-      <div className={styles.tag}>{`<body>`}</div>
+  return (
+    <main
+      className={`${styles.main}  ${fira.className} `}
+      onClick={handleClick}
+    >
+      <div className={`${whiteboardFont.className}`}>
+        <div className={styles.whiteBoard}>
+          <div className={styles.topOfBoard}>
+            <div className={styles.title}>Aron Weinraub</div>
+            <div className={styles.secondaryLine}>Frontend Architect</div>
+            <div className={styles.saying}>
+              Great <span className={styles.sayingSpecial}>DX</span> with
+              uncompromising <span className={styles.sayingSpecial}>UX</span>.
+            </div>
+
+            <Buttons />
+          </div>
+        </div>
+      </div>
+
+      {/*  <div className={styles.tag}>{`<body>`}</div>
 
       <div className={styles.indented}>
         <div>
@@ -65,7 +97,7 @@ export default function Home() {
         <div className={styles.tag}>{`</script>`}</div>
       </div>
 
-      <div className={styles.tag}>{`</body>`}</div>
+      <div className={styles.tag}>{`</body>`}</div> */}
 
       <ConsoleLog />
       <GoogleA />

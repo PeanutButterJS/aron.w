@@ -1,15 +1,13 @@
 "use client";
 
-import reactGa from "react-ga4";
-
 import { useEffect } from "react";
+import { useGa } from "./hooks/useGA";
 
 export const GoogleA = () => {
+  const ga = useGa();
   useEffect(() => {
     const trackingId = "G-8MX8B7Q3XL";
-
-    reactGa.initialize(trackingId);
-    reactGa.send({ hitType: "pageview", page: "/home", title: "Home Page" });
+    ga.initialize(trackingId);
   }, []);
   return null;
 };

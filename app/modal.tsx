@@ -1,9 +1,13 @@
 import { Expirience } from "./expirience/expirience";
 import styles from "./page.module.css";
 
-import { Permanent_Marker } from "next/font/google";
+import { Permanent_Marker, Fira_Code } from "next/font/google";
 
-const marker = Permanent_Marker({
+/* const marker = Permanent_Marker({
+  weight: "400",
+  subsets: ["latin"],
+}); */
+const fira = Fira_Code({
   weight: "400",
   subsets: ["latin"],
 });
@@ -16,7 +20,7 @@ export const Modal = ({
   onClose: () => void;
 }) => {
   return (
-    <div className={styles.modal}>
+    <div className={`${styles.modal} ${fira.className}`}>
       <div className={styles.modalContent}>
         <button className={styles.close} onClick={onClose}>
           &times;

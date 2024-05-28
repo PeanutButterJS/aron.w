@@ -1,8 +1,16 @@
 "use client";
 
+import { Permanent_Marker } from "next/font/google";
 import { useGa } from "./hooks/useGA";
 import { useMixpanel } from "./hooks/useMixpanel";
 import styles from "./page.module.css";
+import localFont from "next/font/local";
+
+const whiteboardFont = localFont({
+  src: "./DryWhiteboardMarker-Regular.ttf",
+  display: "swap",
+  variable: "--whiteboard-font",
+});
 
 export const Button = ({
   id,
@@ -23,10 +31,13 @@ export const Button = ({
   };
 
   return (
-    <button onClick={() => click()} className={styles.button}>
-      <span className={styles.tag}>{`<button>`}</span>
+    <button
+      onClick={() => click()}
+      className={`${whiteboardFont.className} ${styles.button}`}
+    >
+      {/*    <span className={styles.tag}>{`<button>`}</span> */}
       <span>{name}</span>
-      <span className={styles.tag}>{`</button>`}</span>
+      {/*   <span className={styles.tag}>{`</button>`}</span> */}
     </button>
   );
 };

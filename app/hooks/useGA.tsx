@@ -38,6 +38,11 @@ export interface SendEvent {
 }
 
 export const useGa = () => {
+  const initialize = (trackingId: string) => {
+    ReactGA.initialize(trackingId);
+    ReactGA.send({ hitType: "pageview", page: "/", title: "Home Page" });
+  };
+
   const sendEvent = (event: SendEvent) => {
     const { eventName, ...rest } = event;
     ReactGA.event(eventName, {
@@ -45,5 +50,5 @@ export const useGa = () => {
       ...rest,
     });
   };
-  return { sendEvent };
+  return { sendEvent, initialize };
 };
