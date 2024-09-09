@@ -8,13 +8,7 @@ const marker = Permanent_Marker({
   subsets: ["latin"],
 });
 
-export const SidePanel = ({
-  displayId,
-  onClose,
-}: {
-  displayId: number | null;
-  onClose: () => void;
-}) => {
+export const SidePanel = ({ displayId }: { displayId: number | null }) => {
   return (
     <div className={styles.modal}>
       <div className={styles.modalContent}>
