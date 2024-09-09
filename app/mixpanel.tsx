@@ -9,7 +9,7 @@ export const Mixpanel = () => {
     const token = "c01e49beecb155253258ef019cc2e854";
 
     mixpanel.init(token, {
-      debug: true,
+      debug: false,
       track_pageview: true,
       persistence: "localStorage",
     });

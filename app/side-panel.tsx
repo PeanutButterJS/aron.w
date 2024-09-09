@@ -8,7 +8,7 @@ const marker = Permanent_Marker({
   subsets: ["latin"],
 });
 
-export const Modal = ({
+export const SidePanel = ({
   displayId,
   onClose,
 }: {
@@ -18,9 +18,9 @@ export const Modal = ({
   return (
     <div className={styles.modal}>
       <div className={styles.modalContent}>
-        <button className={styles.close} onClick={onClose}>
+        {/* <button className={styles.close} onClick={onClose}>
           &times;
-        </button>
+        </button> */}
         {displayId === 1 && <div>these are my references</div>}
         {displayId === 2 && <Expirience />}
         {displayId === 3 && <div>these are my education</div>}
