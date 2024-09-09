@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-import { Modal } from "./modal";
+import { SidePanel } from "./side-panel";
 import styles from "./page.module.css";
 import { Fira_Code } from "next/font/google";
 import { Button } from "./button";
@@ -31,17 +31,12 @@ export const Buttons = () => {
   return (
     <>
       <div className={`${fira.className} ${styles.buttons}`}>
-        <Button id={1} name="References" setOpen={setOpen} />
         <Button id={2} name="Expirience" setOpen={setOpen} />
+        <Button id={1} name="References" setOpen={setOpen} />
         <Button id={3} name="Education" setOpen={setOpen} />
         <Button id={4} name="Projects" setOpen={setOpen} />
       </div>
-      <Modal
-        displayId={open}
-        onClose={() => {
-          setOpen(null);
-        }}
-      />
+      <SidePanel displayId={open} />
     </>
   );
 };

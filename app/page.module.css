@@ -1,53 +1,48 @@
 .main {
   display: flex;
   flex-direction: column;
-
+  height: 100vh;
   background-color: #2e2e2e;
   display: flex;
   flex-direction: column;
-  padding: 20px;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   box-sizing: border-box;
-  min-height: 100vh;
   position: relative;
 }
-
-.whiteBoard {
-  background-color: #f2f2f2;
-  position: absolute;
-  width: calc(100vw - 50px);
-  height: calc(100vh - 50px);
-  box-sizing: border-box;
-  border-radius: 5px;
-  border: 10px solid #adb2bd;
-  box-shadow: inset -1px 2px 2px #404040, 6px 9px 1px rgba(0, 0, 0, 0.1);
+.content {
+  padding: 20px;
+  width: 100%;
+  height: 100vh;
+  transition: all 0.5s ease-in-out;
   overflow: hidden;
+  overflow-y: auto;
+  box-sizing: border-box;
+  scrollbar-color: rgba(255, 255, 255, 0.2) rgba(0, 0, 0, 0.3);
+  scrollbar-width: thin;
 }
 
-.topOfBoard {
-  position: absolute;
-  left: 50px;
-  top: 50px;
-
-  color: #2e2e2e;
-}
-
-.insideBody {
-  padding-left: 45px;
-  display: flex;
-  flex-direction: column;
+:global(.open) .content {
+  width: 50vw;
 }
 
 .tag {
-  opacity: 0.5;
   color: #f92672;
-}
-:global(.expirience) .tag {
-  opacity: 0.8;
 }
 
 .indented {
   padding-left: 45px;
+}
+
+/* .id {
+  color: #a6e22e;
+} */
+
+/* .string {
+  color: #e6db74;
+} */
+
+.expirienceSection {
+  margin-top: 40px;
 }
 
 .script {
@@ -57,7 +52,6 @@
 
 .consoleLog {
   padding-left: 45px;
-  opacity: 0.25;
   position: relative;
 }
 
@@ -81,11 +75,11 @@
 .comment {
   padding-left: 45px;
   color: #a6e22e;
-  opacity: 0.35;
 }
 
 .buttons {
   margin-top: 45px;
+  padding-left: 45px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -98,7 +92,7 @@
   outline: none;
   padding: 0;
   background-color: transparent;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   color: white;
   font-weight: 100;
   display: flex;
@@ -115,50 +109,39 @@
 }
 
 .modal {
-  box-sizing: border-box;
   position: fixed;
-  top: 50%;
-  left: 50%;
-  background: rgba(246, 246, 246, 0.2);
-  /*  border-radius: 0px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
-  /*    backdrop-filter: blur(1px); */
-  box-shadow: 0 0 18px 3px rgba(0, 0, 0, 0.3);
+  bottom: 0;
+  top: 0;
 
-  backdrop-filter: blur(12.7px) saturate(20%);
-  /*  background-color: rgba(255, 255, 255, 0.5); */
-  border-radius: 12px;
-  color: #2e2e2e;
+  right: -50%;
+  width: 50vw;
+  height: 100vh;
+  background-color: #2e2e2e;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+
   padding: 15px;
-  padding-right: 24px;
-  padding-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
   opacity: 0;
-  z-index: 1;
   transition: all 0.5s ease-in-out;
-  width: 0;
-  height: 0;
 }
 
 :global(.open) .modal {
   opacity: 1;
-  top: 20px;
-  left: 20px;
-  width: calc(100vw - 40px);
-  height: calc(100vh - 40px);
+
+  right: 0;
 }
 
 .modalContent {
-  font-size: 2rem;
+  font-size: 1.4rem;
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
   color: white;
 }
-.close {
+/* .close {
   position: relative;
   top: 10px;
   right: 10px;
@@ -174,74 +157,24 @@
   background: transparent;
   border: none;
   outline: none;
-}
+} */
 
-.expirienceWrapper {
-  display: flex;
-  gap: 0px;
-  align-items: flex-start;
-}
-
-.ul {
-  margin-top: 30px;
-}
-
-.expirience {
-  color: #a6e22e;
-  padding-bottom: 10px;
-  position: relative;
-  flex: 1;
-  gap: 10px;
-  font-size: 2.5rem;
-  display: flex;
-  align-items: baseline;
-  justify-content: flex-start;
-  position: relative;
-  transition: all 0.3s ease-in-out;
-}
 .htmlComment {
   color: #a6e22e;
   font-family: monospace;
 }
 
-.year {
-  font-size: 1.1rem;
-  text-transform: none;
-  font-weight: bold;
-  width: 100px;
-  min-width: 100px;
-  max-width: 100px;
-  margin-top: 9px;
-  position: relative;
-}
-
-.company {
-  font-size: 1.4rem;
-  /*   color: #263441; */
-  text-transform: none;
-  font-weight: bold;
-}
-
 .expirienceContent {
-  font-size: 1.6rem;
-  max-height: calc(100vh - 40px - 65px);
+  font-size: 1.4rem;
+  max-height: calc(100vh - 30px);
   overflow-y: auto;
-  scrollbar-color: rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.3);
+  scrollbar-color: rgba(255, 255, 255, 0.2) rgba(0, 0, 0, 0.3);
   scrollbar-width: thin;
-  padding: 0px 50px 0 50px;
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
 
-.list {
-  margin: 0;
-}
-
-.list li:not(:first-child) {
-  margin-top: 20px;
-}
-
-.include {
-  margin-bottom: 10px;
+.contantInfo {
+  color: #fd971f;
 }
