@@ -20,6 +20,9 @@ export default function Home() {
   return (
     <main className={`${styles.main} ${fira.className} `}>
       <section className={styles.content}>
+        {/*  <div className={styles.tabs}>
+          <div className={styles.tab}>home.html</div>
+        </div> */}
         <div className={styles.tag}>{`<body>`}</div>
 
         <div className={styles.indented}>
