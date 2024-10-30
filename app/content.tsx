@@ -47,7 +47,7 @@ export const Content = () => {
                 >{`// React | NextJs | Redux | Typescript | Module Federation | Cypress | Playwright | Agile`}</div>
                 <div
                   className={styles.comment}
-                >{`// Fast, reliable, and quality delivery`}</div>
+                >{`// Fast, reliable, and quality delivery.`}</div>
                 <div
                   className={styles.comment}
                 >{`// Squeaky clean code!`}</div>
