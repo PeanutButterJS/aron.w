@@ -5,6 +5,7 @@ import { Tabs } from "./tabs";
 import { useEffect, useState } from "react";
 import { tabs } from "./constants/tabs";
 import { Expirience } from "./expirience/expirience";
+import { References } from "./references/references";
 
 export const Content = () => {
   const [tabOpen, setTabOpen] = useState<string | null>(tabs.Home);
@@ -43,7 +44,18 @@ export const Content = () => {
                 <div className={styles.tag}>{`<script>`}</div>
                 <div
                   className={styles.comment}
-                >{`// check out the contact info in the console.`}</div>
+                >{`// React | NextJs | Redux | Typescript | Module Federation | Cypress | Playwright | Agile`}</div>
+                <div
+                  className={styles.comment}
+                >{`// Fast, reliable, and quality delivery.`}</div>
+                <div
+                  className={styles.comment}
+                >{`// Squeaky clean code!`}</div>
+                <br />
+                <br />
+                <div
+                  className={styles.comment}
+                >{`// check out my contact info in the console.`}</div>
                 <span className={styles.consoleLog}>
                   console.log(
                   <span className={styles.contantInfo}>contactInfo</span>)
@@ -52,9 +64,9 @@ export const Content = () => {
               </div>
             </>
           )}
-          {tabOpen === tabs.References && <div>these are my references</div>}
+          {tabOpen === tabs.References && <References />}
           {tabOpen === tabs.Expirience && <Expirience />}
-          {tabOpen === tabs.Education && <div>these are my education</div>}
+          {/*  {tabOpen === tabs.Education && <div>these are my education</div>} */}
         </div>
         <div className={styles.tag}>{`</body>`}</div>
       </section>

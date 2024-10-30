@@ -16,7 +16,7 @@ export const Buttons = ({ setTabOpen, tabOpen }: any) => {
       <div className={`${fira.className} ${styles.buttons}`}>
         <Button setTabOpen={setTabOpen} id={tabs.Expirience} />
         <Button setTabOpen={setTabOpen} id={tabs.References} />
-        <Button setTabOpen={setTabOpen} id={tabs.Education} />
+        {/*   <Button setTabOpen={setTabOpen} id={tabs.Education} /> */}
       </div>
     </>
   );

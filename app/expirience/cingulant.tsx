@@ -1,20 +1,20 @@
 import styles from "../page.module.css";
 
-export const Rapaport = () => {
+export const Cingulant = () => {
   return (
     <div>
       <div className={styles.tag}>{`<section>`}</div>
       <div className={styles.indented}>
-        <div className={styles.htmlComment}>{`<!-- 2016 - 2022 -->`}</div>
+        <div className={styles.htmlComment}>{`<!-- 2011 - 2014 -->`}</div>
 
         <div>
           <span className={styles.tag}>{`<h1>`}</span>
-          {`Frontend Architect - Lead Frontend Developer`}
+          {`Software/Web Developer`}
           <span className={styles.tag}>{`</h1>`}</span>
         </div>
         <div>
           <span className={styles.tag}>{`<h3>`}</span>
-          {`Rapaport`}
+          {`Cingulant Software`}
           <span className={styles.tag}>{`</h3>`}</span>
         </div>
 
@@ -25,32 +25,22 @@ export const Rapaport = () => {
               <div className={styles.tag}>{`<li>`}</div>
               <div
                 className={styles.indented}
-              >{`Development of Rapaport Technologies’ flagship diamond trading platform “RapNet”.`}</div>
+              >{`Development and maintenance of C#/ASP.Net/MVC/SQL-Server data management systems for a number of large non-profit organizations`}</div>
               <div className={styles.tag}>{`</li>`}</div>
               <div className={styles.tag}>{`<li>`}</div>
               <div
                 className={styles.indented}
-              >{`Oversee, manage, and development of a ReactJs/Redux SPA.`}</div>
+              >{`Development and maintenance of ASP.Net/MVC web application, using SQL-Server and Linq to SQL to collect user data and generate reports used to study workplace related injuries.`}</div>
               <div className={styles.tag}>{`</li>`}</div>
               <div className={styles.tag}>{`<li>`}</div>
               <div
                 className={styles.indented}
-              >{`Development of a C# .Net Core backend with a MicroService architecture and SQL Server and PostgresSql databases.`}</div>
+              >{`Development of a C# and Winforms application to reformat the printed version of the Koren Talmud to the IOS App version. Included extensive MySql and XML manipulation.`}</div>
               <div className={styles.tag}>{`</li>`}</div>
               <div className={styles.tag}>{`<li>`}</div>
               <div
                 className={styles.indented}
-              >{`Lead the rewrite of AngularJs SPA into ReactJs resulting in substantial performance boosts and a smoother UX. `}</div>
-              <div className={styles.tag}>{`</li>`}</div>
-              <div className={styles.tag}>{`<li>`}</div>
-              <div
-                className={styles.indented}
-              >{`Created and maintain the bundling of a Micro Frontend architecture with Webpack and Module Federation to allow for a more performant and less dependent deployment (CI/CD) process.`}</div>
-              <div className={styles.tag}>{`</li>`}</div>
-              <div className={styles.tag}>{`<li>`}</div>
-              <div
-                className={styles.indented}
-              >{`Implement an extreme clean code policy with the help of ESLint, StyleLint, Prettier and strict code reviews.`}</div>
+              >{`Lead developer of Davka Corp's, Yom L’Yom the Jewish Calendar Maker, a C#/Winforms calendar/appointment maker.`}</div>
               <div className={styles.tag}>{`</li>`}</div>
             </div>
             <div className={styles.tag}>{`</ul>`}</div>
