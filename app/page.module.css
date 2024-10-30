@@ -108,11 +108,12 @@
 }
 
 .expirienceContent {
-  font-size: 1.4rem;
-
+  font-size: 1.7rem;
+  padding: 45px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
+  background: #191919;
 }
 
 .contantInfo {
@@ -138,4 +139,63 @@
 
 :global(.open).tab {
   background: inherit;
+}
+
+.li {
+  font-size: 1.7rem;
+  max-width: 60%;
+  margin-bottom: 8px;
+  letter-spacing: 0.7px;
+  line-height: 22px;
+  /*  &::marker {
+    color: #fd971f;
+  } */
+}
+
+.paragrapgh {
+  font-size: 1.7rem;
+  max-width: 60%;
+  margin-bottom: 8px;
+  letter-spacing: 0.7px;
+  line-height: 22px;
+  /*  &::marker {
+    color: #fd971f;
+  } */
+}
+.referenceText {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-left: 30px;
+  gap: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.h1 {
+  margin: 0;
+  font-weight: 500;
+  font-size: 2.1rem;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  color: #e0e0e0;
+}
+
+.time {
+  font-size: 1.3rem;
+  color: #a6e22e;
+  letter-spacing: 0.7px;
+}
+
+.preview {
+  background-color: rgba(255, 255, 255, 0.1);
+
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.company {
+  color: #f92672;
+  opacity: 0.94;
+  font-size: 1.4rem;
 }

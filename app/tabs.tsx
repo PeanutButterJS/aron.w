@@ -38,9 +38,9 @@ export const Tabs = ({ setTabOpen, tabOpen }: any) => {
           }}
           className={`material-symbols-outlined html text-[24px}] text-primary`}
         >
-          code
+          preview
         </span>
-        expirience.html
+        expirience.html ~ preview
       </div>
       <div
         onClick={() => setTabOpen(tabs.References)}
@@ -56,9 +56,9 @@ export const Tabs = ({ setTabOpen, tabOpen }: any) => {
           }}
           className={`material-symbols-outlined html text-[24px}] text-primary`}
         >
-          code
+          preview
         </span>
-        references.html
+        references.html ~ preview
       </div>
       {/* <div
         onClick={() => setTabOpen(tabs.Education)}
