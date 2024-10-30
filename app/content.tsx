@@ -55,7 +55,7 @@ export const Content = () => {
                 <br />
                 <div
                   className={styles.comment}
-                >{`// check out my contact info in the console.`}</div>
+                >{`// Check out my contact info in the console.`}</div>
                 <span className={styles.consoleLog}>
                   console.log(
                   <span className={styles.contantInfo}>contactInfo</span>)
