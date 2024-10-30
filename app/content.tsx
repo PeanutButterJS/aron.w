@@ -44,7 +44,7 @@ export const Content = () => {
                 <div className={styles.tag}>{`<script>`}</div>
                 <div
                   className={styles.comment}
-                >{`// React | NextJs | Redux | Typescript | Module Federation | Cypress | Playwright`}</div>
+                >{`// React | NextJs | Redux | Typescript | Module Federation | Cypress | Playwright | Agile`}</div>
                 <div
                   className={styles.comment}
                 >{`// Fast, reliable, and quality delivery`}</div>
