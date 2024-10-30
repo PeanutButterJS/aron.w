@@ -60,7 +60,7 @@ export const Tabs = ({ setTabOpen, tabOpen }: any) => {
         </span>
         references.html
       </div>
-      <div
+      {/* <div
         onClick={() => setTabOpen(tabs.Education)}
         className={`${styles.tab} ${tabOpen === tabs.Education ? "open" : ""}`}
       >
@@ -77,7 +77,7 @@ export const Tabs = ({ setTabOpen, tabOpen }: any) => {
           code
         </span>
         education.html
-      </div>
+      </div> */}
     </div>
   );
 };
