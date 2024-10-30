@@ -13,10 +13,10 @@ export const Content = () => {
   return (
     <>
       <Tabs tabOpen={tabOpen} setTabOpen={setTabOpen} />
-      <section className={styles.content}>
-        <div className={styles.tag}>{`<body>`}</div>
-        <div className={styles.indented}>
-          {tabOpen === tabs.Home && (
+      {tabOpen === tabs.Home && (
+        <section className={styles.content}>
+          <div className={styles.tag}>{`<body>`}</div>
+          <div className={styles.indented}>
             <>
               <div>
                 <span className={styles.tag}>{`<h1>`}</span>
@@ -48,9 +48,7 @@ export const Content = () => {
                 <div
                   className={styles.comment}
                 >{`// Fast, reliable, and quality delivery.`}</div>
-                <div
-                  className={styles.comment}
-                >{`// Squeaky clean code!`}</div>
+                <div className={styles.comment}>{`// Squeaky clean code!`}</div>
                 <br />
                 <br />
                 <div
@@ -63,13 +61,12 @@ export const Content = () => {
                 <div className={styles.tag}>{`</script>`}</div>
               </div>
             </>
-          )}
-          {tabOpen === tabs.References && <References />}
-          {tabOpen === tabs.Expirience && <Expirience />}
-          {/*  {tabOpen === tabs.Education && <div>these are my education</div>} */}
-        </div>
-        <div className={styles.tag}>{`</body>`}</div>
-      </section>
+          </div>
+          <div className={styles.tag}>{`</body>`}</div>
+        </section>
+      )}
+      {tabOpen === tabs.References && <References />}
+      {tabOpen === tabs.Expirience && <Expirience />}
     </>
   );
 };
