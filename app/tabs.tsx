@@ -16,7 +16,8 @@ export const Tabs = ({ setTabOpen, tabOpen }: any) => {
             fontSize: "18px",
             position: "absolute",
             left: "9px",
-            top: "10px",
+            top: "50%",
+            transform: "translateY(-50%)",
           }}
           className={`material-symbols-outlined html text-[24px}] text-primary`}
         >
@@ -34,13 +35,14 @@ export const Tabs = ({ setTabOpen, tabOpen }: any) => {
             fontSize: "18px",
             position: "absolute",
             left: "9px",
-            top: "10px",
+            top: "50%",
+            transform: "translateY(-50%)",
           }}
           className={`material-symbols-outlined html text-[24px}] text-primary`}
         >
           preview
         </span>
-        expirience.html ~ preview
+        experience.html ~ preview
       </div>
       <div
         onClick={() => setTabOpen(tabs.References)}
@@ -52,7 +54,8 @@ export const Tabs = ({ setTabOpen, tabOpen }: any) => {
             fontSize: "18px",
             position: "absolute",
             left: "9px",
-            top: "10px",
+            top: "50%",
+            transform: "translateY(-50%)",
           }}
           className={`material-symbols-outlined html text-[24px}] text-primary`}
         >
