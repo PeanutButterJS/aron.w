@@ -1,6 +1,6 @@
 export const tabs = {
   Home: "Home",
   References: "References",
-  Expirience: "Expirience",
+  Expirience: "Experience",
   Education: "Education",
 };

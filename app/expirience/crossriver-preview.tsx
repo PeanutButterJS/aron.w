@@ -26,7 +26,7 @@ export const Crossriver = () => {
         <li
           className={styles.li}
         >{`Established standardized coding practices and styles with an
-          emphasis on clean very clean code, allowing for developers to easily
+          emphasis on very clean code, allowing for developers to easily
           feel at home in any code base.`}</li>
         <li
           className={styles.li}
